@@ -3,8 +3,18 @@
   <mode name="DefaultMode">
     <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
     <property object="GPIO" propertyId="ABPeripheral.included" value="true"/>
+    <property object="PB13" propertyId="ports.settings.pinmode" value="Push-pull"/>
+    <property object="PB14" propertyId="ports.settings.dout" value="1"/>
+    <property object="PB14" propertyId="ports.settings.filter" value="Enabled"/>
+    <property object="PB14" propertyId="ports.settings.pinmode" value="Input pull"/>
+    <property object="PB14" propertyId="ports.settings.pulldirection" value="Pullup"/>
+    <property object="PB14" propertyId="ports.settings.pullup" value="Enabled"/>
     <property object="PC0" propertyId="ports.settings.custompinname" value="OPTO_TX"/>
+    <property object="PC0" propertyId="ports.settings.dout" value="1"/>
+    <property object="PC0" propertyId="ports.settings.filter" value="Enabled"/>
     <property object="PC0" propertyId="ports.settings.pinmode" value="Push-pull"/>
+    <property object="PC0" propertyId="ports.settings.pulldirection" value="Pullup"/>
+    <property object="PC0" propertyId="ports.settings.pullup" value="Enabled"/>
     <property object="PD4" propertyId="ports.settings.custompinname" value="S1"/>
     <property object="PD4" propertyId="ports.settings.dout" value="1"/>
     <property object="PD4" propertyId="ports.settings.filter" value="Enabled"/>
@@ -27,6 +37,12 @@
     <property object="PE12" propertyId="ports.settings.pullup" value="Enabled"/>
     <property object="PF2" propertyId="ports.settings.custompinname" value="SARA_RST"/>
     <property object="PF2" propertyId="ports.settings.pinmode" value="Push-pull"/>
+    <property object="PORTIO" propertyId="portio.acmp0.location.acmp0" value="2"/>
+    <property object="PORTIO" propertyId="portio.i2c0.location.i2c0" value="6"/>
+    <property object="PORTIO" propertyId="portio.leuart0.enable.rx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.leuart0.enable.tx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.leuart0.location.leuart0" value="1"/>
+    <property object="PORTIO" propertyId="portio.prs.location.prs" value="3"/>
     <property object="PORTIO" propertyId="portio.usart0.location.usart0" value="6"/>
     <property object="PORTIO" propertyId="portio.usart1.enable.rx" value="Enabled"/>
     <property object="PORTIO" propertyId="portio.usart1.enable.tx" value="Enabled"/>

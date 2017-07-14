@@ -63,8 +63,10 @@ int main(void)
 		  	  case evKEY2_ON : {
 		  		  GPIO_PinOutToggle( OPTO_TX_PORT, OPTO_TX_PIN );
 		  		  if( GPIO_PinInGet( OPTO_TX_PORT, OPTO_TX_PIN )) {
+		  			  GPIO_PinOutClear( SARA_RST_PORT, SARA_RST_PIN );
 		  		  }
 		  		  else {
+		  			  GPIO_PinOutSet( SARA_RST_PORT, SARA_RST_PIN );
 		  		  }
 		  		  break;
 		  	  }

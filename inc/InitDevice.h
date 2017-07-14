@@ -38,6 +38,12 @@ extern void PORTIO_enter_DefaultMode_from_RESET(void);
 
 // $[User-defined pin name abstraction]
 
+#define LEUART0_RX_PIN      (14)
+#define LEUART0_RX_PORT     (gpioPortB)
+
+#define LEUART0_TX_PIN      (13)
+#define LEUART0_TX_PORT     (gpioPortB)
+
 #define OPTO_TX_PIN         (0)
 #define OPTO_TX_PORT        (gpioPortC)
 

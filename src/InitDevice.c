@@ -322,11 +322,21 @@ extern void PORTIO_enter_DefaultMode_from_RESET(void) {
 	// [Port A Configuration]$
 
 	// $[Port B Configuration]
+
+	/* Pin PB13 is configured to Push-pull */
+	GPIO->P[1].MODEH = (GPIO->P[1].MODEH & ~_GPIO_P_MODEH_MODE13_MASK)
+			| GPIO_P_MODEH_MODE13_PUSHPULL;
+
+	/* Pin PB14 is configured to Input enabled with pull-up */
+	GPIO->P[1].DOUT |= (1 << 14);
+	GPIO->P[1].MODEH = (GPIO->P[1].MODEH & ~_GPIO_P_MODEH_MODE14_MASK)
+			| GPIO_P_MODEH_MODE14_INPUTPULL;
 	// [Port B Configuration]$
 
 	// $[Port C Configuration]
 
 	/* Pin PC0 is configured to Push-pull */
+	GPIO->P[2].DOUT |= (1 << 0);
 	GPIO->P[2].MODEL = (GPIO->P[2].MODEL & ~_GPIO_P_MODEL_MODE0_MASK)
 			| GPIO_P_MODEL_MODE0_PUSHPULL;
 	// [Port C Configuration]$
