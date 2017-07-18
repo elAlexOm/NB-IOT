@@ -18,3 +18,5 @@ uint8_t uart_tx_buffer_free_space( void );
 uint8_t uart_rx_buffer_fill_space( void );
 void uart_clear_rx_buffer( void );
 void uart_clear_tx_buffer( void );
+
+void leuart_send( char* mess, uint8_t length );

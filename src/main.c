@@ -9,6 +9,9 @@
 #include "timer.h"
 #include "at_command.h"
 #include "setting.h"
+#include "rtc.h"
+
+const char mess[] = "Hello\r\n";
 
 int main(void)
 {
@@ -18,6 +21,7 @@ int main(void)
 
   init_board();
   init_timers();
+  init_rtc();
   init_uart();
 
   while (1) {
@@ -80,8 +84,14 @@ int main(void)
 		  		  break;
 		  	  }
 		  	  case evUART_RX_END : {
-
 		  		  break;
+		  	  }
+		  	  case evLEUART_TX_END : {
+		  	  	break;
+		  	  }
+		  	  case evSECOND : {
+		  	  	leuart_send( mess, sizeof( mess ));
+		  	  	break;
 		  	  }
 		  }
 	  }
